@@ -1,12 +1,97 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Autômato Finito</title>
-</head>
-<body>
-    <h1>Olá, Mundo!</h1>
-    <p>Teste</p>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./styles.css" />
+        <title>Analisador Léxico</title>
+    </head>
+
+    <body>
+        <main>
+            <section>
+                <h1>Analisador Léxico • Autômato Finito</h1>
+
+                <hr />
+
+                <div>
+                    <label for="entrada-palavras">Sentença:</label>
+                    <div class="container-registro-sentenca">
+                        <input
+                            type="text"
+                            id="entrada-palavras"
+                            placeholder="Digite aqui as sentenças"
+                            oninput="this.value = sanitizar(this.value)"
+                        />
+                        <button id="adicionar-palavra">+</button>
+                    </div>
+                </div>
+
+                <div>
+                    <label for="buscar-palavra">Pesquisa:</label>
+                    <input
+                        type="text"
+                        id="buscar-palavra"
+                        placeholder="Digite o termo a ser pesquisado"
+                        oninput="this.value = sanitizar(this.value); pesquisa(this.value);"
+                    />
+                </div>
+
+                <hr />
+
+                <div>
+                    <label>Status de pesquisa:</label>
+                    <div id="status"></div>
+                </div>
+
+                <hr />
+
+                <h2>
+                    Feito por João Guilherme Stefani Piccolo e Vinícius
+                    Alexandre Lucas
+                </h2>
+            </section>
+
+            <section>
+                <table id="matriz-automato" border="solid 1px var(--texto)">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>a</th>
+                            <th>b</th>
+                            <th>c</th>
+                            <th>d</th>
+                            <th>e</th>
+                            <th>f</th>
+                            <th>g</th>
+                            <th>h</th>
+                            <th>i</th>
+                            <th>j</th>
+                            <th>k</th>
+                            <th>l</th>
+                            <th>m</th>
+                            <th>n</th>
+                            <th>o</th>
+                            <th>p</th>
+                            <th>q</th>
+                            <th>r</th>
+                            <th>s</th>
+                            <th>t</th>
+                            <th>u</th>
+                            <th>v</th>
+                            <th>w</th>
+                            <th>x</th>
+                            <th>y</th>
+                            <th>z</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="tab-matriz"></tbody>
+                </table>
+            </section>
+        </main>
+
+        <script src="./automato.js"></script>
+    </body>
 </html>
