@@ -1,4 +1,4 @@
-# TDE Linguagens Formais
+# Analisador Léxico - Autômato Finito
 
 ---
 ### **Nomes:**
